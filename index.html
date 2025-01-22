@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Text Editor</title>
+    </head>
+    <body>
+        <input placeholder="Enter Title.." id="title">
+        <input placeholder="Enter Text.." id="contents">
+        <button id="save">Save</button>
+        <script>
+            var title = document.getElementById("title")
+            var contents = document.getElementById("contents")
+            var save = document.getElementById("save")
+            var Title = localStorage.getItem("Title")
+            var Contents = localStorage.getItem("Contents")
+            
+            window.addEventListener("onload", function() {
+                Title = localStorage.getItem("Title")
+                Contents = localStorage.getItem("Contents")
+                title.value = Title
+                contents.value = Contents
+            })
+            window.addEventListener("beforeunload", function() {
+                if (confirm("Your changes will not be saved. Save?")) {
+                    localStorage.setItem("Title", title.value)
+                    localStorage.setItem("Contents", contents.value)
+                    location.close()
+                } else {
+                    location.close()
+                }
+            })
+            save.addEventListener("click", function() {
+                localStorage.setItem("Title", title.value)
+                localStorage.setItem("Contents", contents.value)
+            })
+        </script>
+    </body>
+</html>
