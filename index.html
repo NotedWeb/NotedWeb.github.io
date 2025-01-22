@@ -16,8 +16,8 @@
             function Start() {
                 Title = localStorage.getItem("Title")
                 Contents = localStorage.getItem("Contents")
-                title.value = Title
-                contents.value = Contents
+                title.innerHTML = Title
+                contents.innerHTML = Contents
             })
             function Quit() {
                 if (confirm("Your changes will not be saved. Save?")) {
