@@ -1,4 +1,4 @@
-<html>
+<html onload="Start()" beforeunload="Quit()">
     <head>
         <title>Text Editor</title>
     </head>
@@ -13,13 +13,13 @@
             var Title = localStorage.getItem("Title")
             var Contents = localStorage.getItem("Contents")
             
-            window.addEventListener("onload", function() {
+            function Start() {
                 Title = localStorage.getItem("Title")
                 Contents = localStorage.getItem("Contents")
                 title.value = Title
                 contents.value = Contents
             })
-            window.addEventListener("beforeunload", function() {
+            function Quit() {
                 if (confirm("Your changes will not be saved. Save?")) {
                     localStorage.setItem("Title", title.value)
                     localStorage.setItem("Contents", contents.value)
