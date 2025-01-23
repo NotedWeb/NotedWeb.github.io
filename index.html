@@ -20,7 +20,7 @@
                 Contents = localStorage.getItem("Contents")
                 title.innerHTML = Title
                 contents.innerHTML = Contents
-            })
+            }
             save.addEventListener("click", function() {
                 localStorage.setItem("Title", title.get())
                 localStorage.setItem("Contents", contents.get())
