@@ -23,6 +23,7 @@
             save.addEventListener("click", function() {
                 localStorage.setItem("Title", title.get())
                 localStorage.setItem("Contents", contents.get())
+                document.writeln(title.get(), contents.get())
             })
         </script>
     </body>
