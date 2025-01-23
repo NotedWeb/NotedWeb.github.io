@@ -3,7 +3,7 @@
         <title>Text Editor</title>
     </head>
     <body onload="Start()" onbeforeunload="Quit()">
-        <h1>Version 1.4</h1>
+        <h1>Version 1.5</h1>
         <textarea placeholder="Enter Title.." id="title" style="resize: none;"></textarea>
         <p>--------------</p>
         <textarea placeholder="Enter Text.." id="contents" style="resize: none; height: 300px; width: 500px;"></textarea>
@@ -23,11 +23,7 @@
                 contents.innerHTML = Contents
             }
             function Quit() {
-                if (confirm("Are you sure you wanna leave?")) {
-
-                } else {
-
-                }
+                alert("yes yes yes")
             }
             save.addEventListener("click", function() {
                 localStorage.setItem("Title", title.value)
