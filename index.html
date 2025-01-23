@@ -4,9 +4,9 @@
     </head>
     <body onload="Start()">
         <h1>Version 1.0</h1>
-        <input placeholder="Enter Title.." id="title">
+        <textarea placeholder="Enter Title.." id="title" style="sizing: none;"></textarea>
         <p>--------------</p>
-        <textarea placeholder="Enter Text.." id="contents"></textarea>
+        <textarea placeholder="Enter Text.." id="contents" style="sizing: none; height: 300px; width: 100px;"></textarea>
         <p>--------------</p>
         <button id="save">Save</button>
         <script>
@@ -25,7 +25,6 @@
             save.addEventListener("click", function() {
                 localStorage.setItem("Title", title.value)
                 localStorage.setItem("Contents", contents.value)
-                document.writeln(title.get(), contents.get())
             })
         </script>
     </body>
