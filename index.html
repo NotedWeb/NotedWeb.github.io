@@ -4,6 +4,7 @@
     </head>
     <body onload="Start()">
         <input placeholder="Enter Title.." id="title">
+        <p>--------------</p>
         <textarea placeholder="Enter Text.." id="contents"></textarea>
         <button id="save">Save</button>
         <script>
@@ -20,8 +21,8 @@
                 contents.innerHTML = Contents
             })
             save.addEventListener("click", function() {
-                localStorage.setItem("Title", title.value)
-                localStorage.setItem("Contents", contents.value)
+                localStorage.setItem("Title", title.get())
+                localStorage.setItem("Contents", contents.get())
             })
         </script>
     </body>
