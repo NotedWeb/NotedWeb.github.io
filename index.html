@@ -1,10 +1,10 @@
-<html onload="Start()" beforeunload="Quit()">
+<html>
     <head>
         <title>Text Editor</title>
     </head>
-    <body>
+    <body onload="Start()">
         <input placeholder="Enter Title.." id="title">
-        <input placeholder="Enter Text.." id="contents">
+        <textarea placeholder="Enter Text.." id="contents"></textarea>
         <button id="save">Save</button>
         <script>
             var title = document.getElementById("title")
@@ -18,15 +18,6 @@
                 Contents = localStorage.getItem("Contents")
                 title.innerHTML = Title
                 contents.innerHTML = Contents
-            })
-            function Quit() {
-                if (confirm("Your changes will not be saved. Save?")) {
-                    localStorage.setItem("Title", title.value)
-                    localStorage.setItem("Contents", contents.value)
-                    location.close()
-                } else {
-                    location.close()
-                }
             })
             save.addEventListener("click", function() {
                 localStorage.setItem("Title", title.value)
