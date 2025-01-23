@@ -2,7 +2,7 @@
     <head>
         <title>Text Editor</title>
     </head>
-    <body onload="Start()" onbeforeunload="Quit()">
+    <body onload="Start()">
         <h1>Version 1.6</h1>
         <textarea placeholder="Enter Title.." id="title" style="resize: none;"></textarea>
         <p>--------------</p>
@@ -21,9 +21,6 @@
                 Contents = localStorage.getItem("Contents")
                 title.innerHTML = Title
                 contents.innerHTML = Contents
-            }
-            function Quit() {
-                location.replace("https://voidunlocked.github.io")
             }
             save.addEventListener("click", function() {
                 localStorage.setItem("Title", title.value)
