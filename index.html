@@ -2,7 +2,7 @@
     <head>
         <title>Text Editor</title>
     </head>
-    <body onload="Start()">
+    <body onload="Start()" beforeunload="Quit()">
         <h1>Version 1.2</h1>
         <textarea placeholder="Enter Title.." id="title" style="resize: none;"></textarea>
         <p>--------------</p>
@@ -21,6 +21,13 @@
                 Contents = localStorage.getItem("Contents")
                 title.innerHTML = Title
                 contents.innerHTML = Contents
+            }
+            function Quit() {
+                if (confirm("Are you sure you wanna leave?")) {
+
+                } else {
+
+                }
             }
             save.addEventListener("click", function() {
                 localStorage.setItem("Title", title.value)
