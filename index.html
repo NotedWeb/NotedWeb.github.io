@@ -3,7 +3,7 @@
         <title>Text Editor</title>
     </head>
     <body onload="Start()" onbeforeunload="Quit()">
-        <h1>Version 1.5</h1>
+        <h1>Version 1.6</h1>
         <textarea placeholder="Enter Title.." id="title" style="resize: none;"></textarea>
         <p>--------------</p>
         <textarea placeholder="Enter Text.." id="contents" style="resize: none; height: 300px; width: 500px;"></textarea>
@@ -23,7 +23,7 @@
                 contents.innerHTML = Contents
             }
             function Quit() {
-                alert("yes yes yes")
+                location.replace("https://voidunlocked.github.io")
             }
             save.addEventListener("click", function() {
                 localStorage.setItem("Title", title.value)
